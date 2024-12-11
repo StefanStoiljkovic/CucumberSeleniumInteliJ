@@ -1,0 +1,26 @@
+name: Context action
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  Selenium_Tests:
+    runs-on: windows-latest
+
+    steps:
+      - name: Output Git Context
+        run: echo "{{ toJSON(github) }}"
+
+
+
+
+
+
+
+
+
+
