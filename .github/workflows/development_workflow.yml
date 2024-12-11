@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Getting artifacts:
+  Getting-artifacts:
     runs-on: windows-latest
 
     steps:
