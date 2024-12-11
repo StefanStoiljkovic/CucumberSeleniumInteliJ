@@ -1,14 +1,10 @@
-name: Run Initial Test - at the moment "Main Runner"
+name: Getting artifacts on development branch
 
 on:
-  push:
-    branches:
-      - development
-
   workflow_dispatch:
 
 jobs:
-  Selenium_Tests:
+  Getting artifacts:
     runs-on: windows-latest
 
     steps:
@@ -28,7 +24,7 @@ jobs:
         run: mvn clean install
 
       - name: Target file
-        uses: actions/upload-artifacts@V3
+        uses: actions/upload-artifact@V3
         with:
           name: target-file
           path:
