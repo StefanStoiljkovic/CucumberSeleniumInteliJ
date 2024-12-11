@@ -22,7 +22,7 @@ jobs:
       #Bild project
       - name: BUILD project
         run: mvn clean install
-
+      #target
       - name: Target file
         uses: actions/upload-artifact@V3
         with:
