@@ -8,12 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  Selenium_Tests:
+  ToJsonContext:
     runs-on: windows-latest
 
     steps:
       - name: Output Git Context
         run: echo "${{ toJSON(github) }}"
+        shell: bash
 
 
 
