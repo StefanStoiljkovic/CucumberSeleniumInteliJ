@@ -17,8 +17,9 @@ jobs:
 
     steps:
       - name: Output Git Context
-        run: echo "${{ toJSON(github) }}"
-        shell: bash
+        #run: echo "${{ toJSON(github) }}"
+        #shell: bash
+        run: echo "Test"
 
 
 

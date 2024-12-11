@@ -1,0 +1,42 @@
+name: Getting artifacts on development branch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Getting artifacts:
+    runs-on: windows-latest
+
+    steps:
+      # Code checkout
+      - name: Check Out Code
+        uses: actions/checkout@v4
+
+      # JDK installation
+      - name: JDK installation
+        uses: actions/setup-java@v4
+        with:
+          java-version: '23'
+          distribution: "temurin"
+
+      #Bild project
+      - name: BUILD project
+        run: mvn clean install
+      #target
+      - name: Target file
+        uses: actions/upload-artifact@V3
+        with:
+          name: target-file
+          path:
+            target
+
+      #Run Tests
+      - name: Test RUN
+        run: mvn test
+
+
+
+
+
+
+
