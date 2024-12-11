@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Output Git Context
-        run: echo "{{ toJSON(github) }}"
+        run: echo "${{ toJSON(github) }}"
 
 
 
